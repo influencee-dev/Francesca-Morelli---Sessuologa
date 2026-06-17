@@ -1,0 +1,6 @@
+{
+  "name": "Francesca Morelli - Consulente Sessuologa Foggia",
+  "description": "Sito web professionale di Francesca Morelli, consulente sessuologa ed educatrice alla sessualità a Foggia. Consulenze individuali, di coppia e formazione.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
