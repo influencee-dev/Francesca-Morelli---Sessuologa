@@ -682,14 +682,14 @@ export default function App() {
                 <img 
                   src="logo.png" 
                   alt="Francesca Morelli" 
-                  className="h-10 w-auto object-contain"
+                  className="h-14 w-auto object-contain"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     const textFallback = document.getElementById('footer-text-logo-fallback');
                     if (textFallback) textFallback.classList.remove('hidden');
                   }}
                 />
-                <span id="footer-text-logo-fallback" className="font-display font-medium text-lg block tracking-tight text-white">
+                <span id="footer-text-logo-fallback" className="hidden font-display font-medium text-lg block tracking-tight text-white">
                   Francesca Morelli
                 </span>
               </div>

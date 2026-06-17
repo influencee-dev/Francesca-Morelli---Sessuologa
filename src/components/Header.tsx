@@ -57,14 +57,16 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
             <img 
               src="logo.png" 
               alt="Francesca Morelli" 
-              className="h-10 w-auto object-contain"
+              className={`w-auto object-contain transition-all duration-300 ${
+                scrolled ? "h-12 md:h-14" : "h-16 md:h-20"
+              }`}
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
                 const textFallback = document.getElementById('header-text-logo-fallback');
                 if (textFallback) textFallback.classList.remove('hidden');
               }}
             />
-            <div id="header-text-logo-fallback" className="flex flex-col">
+            <div id="header-text-logo-fallback" className="hidden flex flex-col">
               <span className="font-display font-bold text-xl tracking-tight text-charcoal group-hover:text-terracotta transition-colors">
                 Francesca Morelli
               </span>
