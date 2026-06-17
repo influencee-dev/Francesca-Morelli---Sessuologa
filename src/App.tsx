@@ -83,7 +83,7 @@ export default function App() {
   const handleServiceInquiry = (serviceId: string) => {
     // Find service label/value matching form definition
     setSelectedService(serviceId);
-    scrollToSection("contatti");
+    scrollToSection("main-contact-form");
   };
 
   return (
@@ -128,7 +128,7 @@ export default function App() {
                 {/* Action CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
                   <button
-                    onClick={() => scrollToSection("contatti")}
+                    onClick={() => scrollToSection("main-contact-form")}
                     className="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta-hover text-white text-sm font-semibold px-6 py-3.5 rounded-full transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
                   >
                     <Calendar className="w-4.5 h-4.5" />
@@ -530,7 +530,7 @@ export default function App() {
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-2">
               {/* Local interactive Contact */}
               <button
-                onClick={() => scrollToSection("contatti")}
+                onClick={() => scrollToSection("main-contact-form")}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-terracotta hover:bg-terracotta-hover text-white text-xs font-semibold rounded-full shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 cursor-pointer"
               >
                 <Calendar className="w-4.5 h-4.5" />
@@ -682,7 +682,7 @@ export default function App() {
                 <img 
                   src="logo.png" 
                   alt="Francesca Morelli" 
-                  className="h-14 w-auto object-contain"
+                  className="h-28 w-auto object-contain"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     const textFallback = document.getElementById('footer-text-logo-fallback');

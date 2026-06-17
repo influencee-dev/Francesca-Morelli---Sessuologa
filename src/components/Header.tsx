@@ -33,7 +33,11 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
 
   const handleItemClick = (id: string) => {
     setIsOpen(false);
-    onNavigate(id);
+    // Delay slightly to allow the mobile drawer collapse animation to start/complete,
+    // ensuring smooth scroll calculations are stable and uninterrupted by dynamic height transitions.
+    setTimeout(() => {
+      onNavigate(id);
+    }, 200);
   };
 
   return (
@@ -58,7 +62,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
               src="logo.png" 
               alt="Francesca Morelli" 
               className={`w-auto object-contain transition-all duration-300 ${
-                scrolled ? "h-12 md:h-14" : "h-16 md:h-20"
+                scrolled ? "h-20 md:h-24" : "h-32 md:h-40"
               }`}
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
@@ -100,7 +104,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
           {/* Call to action Right banner */}
           <div className="hidden md:flex items-center" id="desktop-cta-btn">
             <button
-              onClick={() => handleItemClick("contatti")}
+              onClick={() => handleItemClick("main-contact-form")}
               className="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta-hover text-white text-xs font-semibold px-4.5 py-2.5 rounded-full transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
             >
               <Calendar className="w-4 h-4" />
@@ -151,7 +155,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
               </div>
               <div className="pt-4 border-t border-warm-beige">
                 <button
-                  onClick={() => handleItemClick("contatti")}
+                  onClick={() => handleItemClick("main-contact-form")}
                   className="w-full flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta-hover text-white text-sm font-semibold py-3 px-4 rounded-full transition-all shadow-sm"
                 >
                   <Calendar className="w-4 h-4" />
