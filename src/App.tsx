@@ -734,8 +734,25 @@ export default function App() {
 
           </div>
 
+          <div className="mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-warm-panna/50">
+            <p className="order-2 sm:order-1 text-center sm:text-left">
+              © Francesca Morelli. Tutti i diritti riservati.
+            </p>
+            
+            {/* Regulatory Policy Actions which open local non-intrusive popup */}
+            <div className="inline-flex gap-5 font-medium order-1 sm:order-2">
+              <span className="hover:text-white transition-colors cursor-pointer text-xs">
+                Foggia Studio Lic.
+              </span>
+              <span className="text-[#3F3A39]">•</span>
+              <span className="text-[11px] hover:text-white transition-colors cursor-pointer block">
+                Informativa Cookie & Privacy predisposta
+              </span>
+            </div>
+          </div>
+
           {/* Section Powered by Socialee */}
-          <div className="mt-10 pt-6 border-t border-[#3F3A39]/60 flex flex-col items-center justify-center text-center space-y-3">
+          <div className="mt-8 pt-6 flex flex-col items-center justify-center text-center space-y-3">
             <div className="flex items-center justify-center gap-2">
               <span className="text-[10px] uppercase tracking-wider text-warm-panna/40 font-medium font-sans">
                 powered by
@@ -786,23 +803,6 @@ export default function App() {
                 <Instagram className="w-3 h-3 text-terracotta hover:text-[#E1306C] transition-colors" />
                 <span>@socialee.it</span>
               </a>
-            </div>
-          </div>
-
-          <div className="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-warm-panna/50">
-            <p className="order-2 sm:order-1 text-center sm:text-left">
-              © Francesca Morelli. Tutti i diritti riservati.
-            </p>
-            
-            {/* Regulatory Policy Actions which open local non-intrusive popup */}
-            <div className="inline-flex gap-5 font-medium order-1 sm:order-2">
-              <span className="hover:text-white transition-colors cursor-pointer text-xs">
-                Foggia Studio Lic.
-              </span>
-              <span className="text-[#3F3A39]">•</span>
-              <span className="text-[11px] hover:text-white transition-colors cursor-pointer block">
-                Informativa Cookie & Privacy predisposta
-              </span>
             </div>
           </div>
         </div>
