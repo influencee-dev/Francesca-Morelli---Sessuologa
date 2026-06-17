@@ -30,6 +30,10 @@ async function startServer() {
          return;
       }
 
+      // List ID from environment or standard fallback
+      const listIdEnv = process.env.BREVO_LIST_ID;
+      const listIds = listIdEnv ? [parseInt(listIdEnv, 10)] : [44];
+
       // Call Brevo API
       const brevoResponse = await fetch("https://api.brevo.com/v3/contacts", {
         method: "POST",
@@ -48,7 +52,7 @@ async function startServer() {
             SERVICE: service || "Non specificato",
             MESSAGE: message || "Non specificato"
           },
-          listIds: [44],
+          listIds: listIds,
           updateEnabled: true
         })
       });
