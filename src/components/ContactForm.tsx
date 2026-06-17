@@ -342,11 +342,6 @@ export default function ContactForm({ selectedService }: ContactFormProps) {
           </>
         )}
       </button>
-
-      {/* Subtle indicator of Brevo/CRM ready connection */}
-      <div className="text-[10px] text-center text-charcoal-light/60 font-mono mt-1">
-        Pronto per integrazione API Brevo / CRM / Mailbox
-      </div>
     </form>
   );
 }

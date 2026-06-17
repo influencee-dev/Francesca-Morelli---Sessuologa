@@ -682,7 +682,7 @@ export default function App() {
                 <img 
                   src="logo.png" 
                   alt="Francesca Morelli" 
-                  className="h-28 w-auto object-contain"
+                  className="h-28 w-auto object-contain brightness-0 invert"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     const textFallback = document.getElementById('footer-text-logo-fallback');
